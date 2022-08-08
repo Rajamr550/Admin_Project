@@ -18,9 +18,9 @@ spring:
   application:
     name: ADMIN-SERVICE
   datasource:
-    url: jdbc:mysql://localhost:3306/admin_db
+    url: jdbc:mysql://useadmindb.cxipmma3xhr1.ap-south-1.rds.amazonaws.com:3306/useadmindb
     username: root
-    password: root
+    password: root1234
   jpa:
     hibernate:
       ddl-auto: update
