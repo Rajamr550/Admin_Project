@@ -6,8 +6,8 @@ Feature: Cucumber Test.
     Then I receive valid Response 
     
      Examples:
-    | email   | name   | password   | phNumber    |
-    |"abc@232"| "ABC"  | "ac123"    | 98989890909 |
+    | email   | name   | password   | phNumber     |
+    |"abc@232"| "ABC"  | "ac123"    | 989898909090 |
    
-
+																		
   
