@@ -24,7 +24,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class AdminSteps {
 	
-	@LocalServerPort
 	private int port=7787;
 	private RestTemplate restTemplate=new RestTemplate();
 	private  String Url="http://localhost";
