@@ -109,5 +109,69 @@ public class AdminSteps {
 		assertTrue(true);
 		
 	}
+	
+	
+	
+	@Given("I Update admin service api endpoint")
+	public void i_Update_admin_service_api_endpoint() {
+
+		String url = Url+":"+port+"/admin/user";
+		List<AdminEntity> updateById = restTemplate.getForObject(url, List.class);
+		assertTrue(!updateById.isEmpty());
+	}
+	
+	
+	
+	@When("^I sending update method record to get id (.*), email (.*),name (.*) ,password (.*) ,phNumber (.*)$")
+	public void i_sending_update_method_record_to_get_id1_email_name_password_phNumber(int id, String email, String name, String password, long phNumber) {
+	 
+    	AdminEntity adminEntity = new AdminEntity();;
+    	id=this.id;
+    	adminEntity.setId(id);
+    	adminEntity.setName("prashant");
+    	adminEntity.setEmail("prashant24@gmail.com");
+    	adminEntity.setPassword("pass@123");
+    	adminEntity.setPhNumber(909887654);
+    	id = adminEntity.getId();	
+    	String url=Url+":"+port+"/admin/user/"+id;
+    	restTemplate.put(url, adminEntity);
+    	
+    	assertNotNull(adminEntity);
+	}
+
+	
+	@Then("I recieve valid Response for update")
+	public void i_recieve_valid_Response_for_update() {
+		AdminEntity adminEntityy = new AdminEntity();
+		id = adminEntityy.getId();
+		String url = Url + ":" + port + "/admin/user/"+3;
+		AdminEntity adminEntity =restTemplate.getForObject(url, AdminEntity.class); 
+        assertNotNull(adminEntity);
+	}
+	
+	//Get BY ID
+	
+	@Given("I Set Get admin service api endpoint with id")
+	public void i_Set_Get_admin_service_api_endpoint_with_id() {
+		String url=Url+":"+port+"/admin/user";
+	    List<AdminEntity> getById = restTemplate.getForObject(url, List.class);
+	    assertTrue(!getById.isEmpty());
+	}
+	
+	@When("I send get by id method to get with id {int}")
+	public void i_send_get_by_id_method_to_get_with_id(int int1) {
+		String url = Url + ":" + port + "/admin/user/"+int1;
+		AdminEntity adminEntityy = restTemplate.getForObject(url, AdminEntity.class);
+		 adminEntityy.getId();
+		 assertNotNull(adminEntityy);
+	}
+	
+	@Then("I recieve valid Response for Get by id")
+	public void i_recieve_valid_Response_for_Get_by_id() {
+		String url = Url + ":" + port + "/admin/user/"+2;
+		AdminEntity adminEntity =restTemplate.getForObject(url, AdminEntity.class); 
+        assertNotNull(adminEntity);
+	}
+	
 
 }
