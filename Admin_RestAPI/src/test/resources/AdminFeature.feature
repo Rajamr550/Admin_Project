@@ -8,7 +8,7 @@ Feature: Cucumber Test.
      Examples:
      
     | email   | name   | password   | phNumber     |
-    |"abc@232"| "ABC"  | "ac123"    | 989898909090 |
+    |"abc@232"| "ABC"  | "ac123"    | 9898698909090 |
    
 																		    
     
