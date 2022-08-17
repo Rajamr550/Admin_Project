@@ -15,12 +15,12 @@
     <name>Admin_RestAPI</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
         <cucumber.version>7.6.0</cucumber.version>
         <junit.version>4.13</junit.version>
     </properties>
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -69,8 +69,8 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- Cucumber dependencies -->
-		<dependency>
+		<!-- Cucumber dependencies  -->
+	<dependency>
 		<groupId>io.cucumber</groupId>
 		<artifactId>cucumber-core</artifactId>
 		<version>${cucumber.version}</version>
@@ -99,15 +99,6 @@
 	</dependency>
 
 	<dependency>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
-		<version>${junit.version}</version>
-		<scope>test</scope>
-	</dependency>
-
-
-
-	<dependency>
 		<groupId>io.cucumber</groupId>
 		<artifactId>cucumber-java8</artifactId>
 		<version>${cucumber.version}</version>
@@ -125,6 +116,17 @@
 		<version>${cucumber.version}</version>
 		<type>pom</type>
 	</dependency>
+	
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>${junit.version}</version>
+		<scope>test</scope>
+	</dependency>
+
+
+
+
 	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
