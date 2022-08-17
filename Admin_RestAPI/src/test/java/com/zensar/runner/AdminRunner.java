@@ -8,7 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources",
-		glue = "classpath:com.zensar"
+		glue = "classpath:com.zensar",
+		publish = true
 		)
 public class AdminRunner {
 
