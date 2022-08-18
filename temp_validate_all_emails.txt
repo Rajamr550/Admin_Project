@@ -1,0 +1,42 @@
+//    private String validateAllAdminEmailIds(List<AdminEntity> adminEntityList) {
+//	for (AdminEntity adminEntity : adminEntityList) {
+//
+//	    String email = adminEntity.getEmail();
+//	    System.out.println("email " + email);
+//
+//	    boolean flag = false;
+//
+//	    if (checkEmailId(email).equals("true")) {
+//		flag = true;
+//	    }
+//
+//	    else {
+//		flag = false;
+//
+//	    }
+//	    if (flag) {
+//		return "true";
+//	    }
+//	}
+//
+//	return "false";
+//
+//    }
+//
+//    private String checkEmailId(String email) {
+//	if (email == null || email.isEmpty()) {
+//	    System.out.println("false");
+//
+//	    return "false";
+//	}
+//	String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+//	Pattern pattern = Pattern.compile(emailRegex);
+//	if (pattern.matcher(email).matches()) {
+//	    System.out.println("true");
+//
+//	    return "true";
+//	}
+//	System.out.println("false");
+//
+//	return "false";
+//    }
