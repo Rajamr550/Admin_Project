@@ -40,6 +40,9 @@ class AdminControllerTest {
 	    @Autowired
 	    ObjectMapper objectMapper;
 	    
+	    
+	    //////// Cucumber Test Cases ///////////////////
+	    
 	    @Test
 	    public void testRegisterAdmin() throws Exception {
 
