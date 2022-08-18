@@ -126,23 +126,21 @@ public class AdminSteps {
 	 
     	AdminEntity adminEntity = new AdminEntity();;
     	id=this.id;
-    	adminEntity.setId(id);
     	adminEntity.setName("prashant");
     	adminEntity.setEmail("prashant24@gmail.com");
     	adminEntity.setPassword("pass@123");
     	adminEntity.setPhNumber(909887654);
-    	id = adminEntity.getId();	
     	String url=Url+":"+port+"/admin/user/"+id;
     	restTemplate.put(url, adminEntity);
-    	
+    	id = adminEntity.getId();
     	assertNotNull(adminEntity);
 	}
 
 	
 	@Then("I recieve valid Response for update")
 	public void i_recieve_valid_Response_for_update() {
-		AdminEntity adminEntityy = new AdminEntity();
-		id = adminEntityy.getId();
+		//AdminEntity adminEntityy = new AdminEntity();
+		
 		String url = Url + ":" + port + "/admin/user/"+3;
 		AdminEntity adminEntity =restTemplate.getForObject(url, AdminEntity.class); 
         assertNotNull(adminEntity);
