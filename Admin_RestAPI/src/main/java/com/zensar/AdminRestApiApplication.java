@@ -27,6 +27,7 @@ public class AdminRestApiApplication {
 	public ModelMapper getModelMapper() {
 		return new ModelMapper();
 	}
+	//check checkout
 	
 	@Bean
 	public Docket getCustomizedDocket() {
