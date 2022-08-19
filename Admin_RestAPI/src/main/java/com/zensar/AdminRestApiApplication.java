@@ -27,7 +27,7 @@ public class AdminRestApiApplication {
 	public ModelMapper getModelMapper() {
 		return new ModelMapper();
 	}
-	//check checkout
+	//check checkout emailValidation
 	
 	@Bean
 	public Docket getCustomizedDocket() {
