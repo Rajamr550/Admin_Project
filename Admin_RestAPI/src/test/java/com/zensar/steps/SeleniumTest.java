@@ -1,5 +1,7 @@
 package com.zensar.steps;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,25 +30,26 @@ public class SeleniumTest {
 	}
 
 	@When("Enter the url {string}")
-	public void enter_the_url(String string) {
+	public void enter_the_url(String url) {
 		
-		driver.get("http://localhost:4200/admin_form/");
+		driver.get(url);
 		
 	}
 
 	@When("Click on delete button of id")
 	public void click_on_delete_button_of_id() {
 		
-		//driver.navigate().to("http://localhost:4200/admin_form/"); 
-		WebElement m = driver.findElement(By.xpath("//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[6]/button/mat-icon"));
-		m.click();
+		WebElement deleteButton = driver.findElement(By.xpath("//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[6]/button/mat-icon"));
+		deleteButton.click();
 	}
 
 
 
 	@Then("Deleting works fine")
 	public void deleting_works_fine() {
-	  System.out.println("working fine");
+	  System.out.println("deleteByID - working fine");
+	  driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	  driver.close();
 	}
 
 
