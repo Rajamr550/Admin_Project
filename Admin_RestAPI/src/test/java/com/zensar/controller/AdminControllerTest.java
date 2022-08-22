@@ -27,7 +27,7 @@ import java.util.List;
 @WebMvcTest
 class AdminControllerTest {
 
-	@MockBean
+		@MockBean
 	    AdminService adminService;
 
 
@@ -41,7 +41,7 @@ class AdminControllerTest {
 	    ObjectMapper objectMapper;
 	    
 	    
-	    //////// Cucumber Test Cases ///////////////////
+	  
 	    
 	    @Test
 	    public void testRegisterAdmin() throws Exception {
