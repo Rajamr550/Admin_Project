@@ -11,11 +11,17 @@ import io.cucumber.java.en.When;
 
 public class SeleniumTest {
 
-	
+    WebDriver driver;			
+
 	@Given("open the chrome browser")
 	public void open_the_chrome_browser() {
 
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\RM66237\\Downloads\\chromedriver_win32\\chromedriver.exe");  
 	       
+        
+	     driver=new ChromeDriver();  
+	       driver.manage().window().maximize();
+
 	       
 	       
 	       
@@ -24,18 +30,15 @@ public class SeleniumTest {
 	@When("Enter the url {string}")
 	public void enter_the_url(String string) {
 		
+		driver.get("http://localhost:4200/admin_form/");
+		
 	}
 
 	@When("Click on delete button of id")
 	public void click_on_delete_button_of_id() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\RM66237\\Downloads\\chromedriver_win32\\chromedriver.exe");  
-	       
-        
-	     WebDriver driver=new ChromeDriver();  
-	        driver.manage().window().maximize();
-
-		driver.navigate().to("http://localhost:4200/admin_form/"); 
-		WebElement m = driver.findElement(By.xpath("//*[@id=\"DataTables_Table_0\"]/tbody/tr[2]/td[6]/button/mat-icon"));
+		
+		//driver.navigate().to("http://localhost:4200/admin_form/"); 
+		WebElement m = driver.findElement(By.xpath("//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[6]/button/mat-icon"));
 		m.click();
 	}
 
