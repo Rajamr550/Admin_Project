@@ -33,7 +33,7 @@ public class AdminSteps {
 	
 	@Given("open browser")
 	public void open_browser() {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\PD66188\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver_win32\\chromedriver.exe");
 		driver =new ChromeDriver();
 		driver.manage().window().maximize();  
 	}
