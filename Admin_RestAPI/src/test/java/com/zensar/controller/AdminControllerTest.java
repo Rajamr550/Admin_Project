@@ -41,7 +41,6 @@ class AdminControllerTest {
 	    ObjectMapper objectMapper;
 	    
 	    
-	    //////// Cucumber Test Cases ///////////////////
 	    
 	    @Test
 	    public void testRegisterAdmin() throws Exception {

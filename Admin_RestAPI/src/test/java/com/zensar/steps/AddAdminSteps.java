@@ -33,7 +33,7 @@ public class AddAdminSteps {
 	
 	@Given("open browser")
 	public void open_browser() {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\PD66188\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver_win32\\chromedriver.exe");
 		driver =new ChromeDriver();
 		driver.manage().window().maximize();  
 	}
@@ -59,7 +59,7 @@ public class AddAdminSteps {
 	@Then("Admin details get registered")
 	public void admin_details_get_registered() {
 		String capText=	driver.findElement(By.xpath("//*")).getText();
-		Assert.assertEquals(true, capText.contains("Dhoke123@gmail.com"));	   
+		Assert.assertEquals(true, capText.contains("Zensar123@gmail.com"));	   
 	}
 
 
